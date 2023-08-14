@@ -3,10 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="ControlAlquilerJAVA">
+<<<<<<< HEAD
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Rol.java</file>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Equipo.java</file>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Categoria.java</file>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Usuario.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquilerJAVA/controldealquiler/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Usuario.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquilerJAVA/controldealquiler/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Categoria.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquilerJAVA/controldealquiler/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Equipo.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquilerJAVA/controldealquiler/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Rol.java</file>
+=======
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquilerJAVA/controldealquiler/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Categoria.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquilerJAVA/controldealquiler/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Rol.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquilerJAVA/controldealquiler/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Equipo.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquilerJAVA/controldealquiler/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Usuario.java</file>
+>>>>>>> 544be5b4beaba26de9c9a7143f710cdb0d554677
+>>>>>>> 842df0fd4e130d2227235bc782e52426e42ee38a
         </group>
     </open-files>
 </project-private>
