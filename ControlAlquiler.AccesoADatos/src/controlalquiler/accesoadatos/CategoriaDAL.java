@@ -1,9 +1,9 @@
 
-package cfhn.controlalquiler.accesoadatos;
+package controlalquiler.accesoadatos;
 
 import java.util.*;
 import java.sql.*;
-import cfhn.controlalquiler.entidadesdenegocio.*;
+import controlalquiler.entidadesdenegocio.*;
 
 public class CategoriaDAL {
     
