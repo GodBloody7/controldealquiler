@@ -1,5 +1,5 @@
 
-package catalogoempresas.accesoadatos;
+package controlalquiler.accesoadatos;
 
 import java.sql.*; 
 //el asterisco significa que vamos a importar todas las clases que lleva
@@ -13,7 +13,7 @@ public class ComunDB {
     static int TIPODB = TipoDB.SQLSERVER;
     
     static String connectionUrlSqlServer = "jdbc:sqlserver://localhost;"
-            + "database=CatalogoEmpresasDB;"
+            + "database=ControlAlquiler;"
             + "user=JavaUser;"
             + "password=#Modulo16;"
             + "loginTimeout=30;encrypt=false;trustServerCertificate=false";
