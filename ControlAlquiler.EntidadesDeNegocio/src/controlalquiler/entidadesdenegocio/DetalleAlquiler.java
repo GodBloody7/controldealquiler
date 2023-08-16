@@ -1,7 +1,6 @@
 
 package controlalquiler.entidadesdenegocio;
 
-
 public class DetalleAlquiler {
     private int id;
     private int idAquiler;
