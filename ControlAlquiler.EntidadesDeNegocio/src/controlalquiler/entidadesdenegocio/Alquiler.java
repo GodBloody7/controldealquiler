@@ -11,13 +11,15 @@ public class Alquiler {
     private LocalDate fechaDevolucion;
     private LocalDate fechaRegistrado;
     private LocalDate fechaCerrado;
-    private byte status;
+    private byte estatus;
+    private int top_aux;
+    private Usuario usuario;
 
     
     public Alquiler() {
     }
 
-    public Alquiler(int id, int idCliente, int idUsuario, LocalDate fechaEntrega, LocalDate fechaDevolucion, LocalDate fechaRegistrado, LocalDate fechaCerrado, byte status) {
+    public Alquiler(int id, int idCliente, int idUsuario, LocalDate fechaEntrega, LocalDate fechaDevolucion, LocalDate fechaRegistrado, LocalDate fechaCerrado, byte estatus, int top_aux, Usuario usuario) {
         this.id = id;
         this.idCliente = idCliente;
         this.idUsuario = idUsuario;
@@ -25,7 +27,9 @@ public class Alquiler {
         this.fechaDevolucion = fechaDevolucion;
         this.fechaRegistrado = fechaRegistrado;
         this.fechaCerrado = fechaCerrado;
-        this.status = status;
+        this.estatus = estatus;
+        this.top_aux = top_aux;
+        this.usuario = usuario;
     }
 
     public int getId() {
@@ -84,14 +88,25 @@ public class Alquiler {
         this.fechaCerrado = fechaCerrado;
     }
 
-    public byte getStatus() {
-        return status;
+    public byte getEstatus() {
+        return estatus;
     }
 
-    public void setStatus(byte status) {
-        this.status = status;
+    public void setEstatus(byte status) {
+        this.estatus = estatus;
     }
     
-    
-    
+        public int getTop_aux() {
+        return top_aux;
+    }
+
+    public void setTop_aux(int top_aux) {
+        this.top_aux = top_aux;
+    }
+    public Usuario getUsuario(){
+        return usuario;
+    }
+    public void setUsuario(Usuario usuario){
+        this.usuario = usuario;
+    }
 }
