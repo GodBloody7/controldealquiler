@@ -9,11 +9,12 @@ public class Cliente {
     private String telefono;
     private String direccion;
     private byte estado;
+    private int top_aux;
 
     public Cliente() {
     }
 
-    public Cliente(int id, String nombre, String apellido, String razonsocial, String telefono, String direccion, byte estado) {
+    public Cliente(int id, String nombre, String apellido, String razonsocial, String telefono, String direccion, byte estado, int top_aux) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -21,6 +22,7 @@ public class Cliente {
         this.telefono = telefono;
         this.direccion = direccion;
         this.estado = estado;
+        this.top_aux = top_aux;
     }
 
     public int getId() {
@@ -78,4 +80,13 @@ public class Cliente {
     public void setEstado(byte estado) {
         this.estado = estado;
     }
+
+    public int getTop_aux() {
+        return top_aux;
+    }
+
+    public void setTop_aux(int top_aux) {
+        this.top_aux = top_aux;
+    }
+   
 }
