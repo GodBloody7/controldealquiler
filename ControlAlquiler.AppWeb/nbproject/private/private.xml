@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group name="ControlAlquilerJAVA">
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/web/Views/DetalleAlquiler/index.jsp</file>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/web/Views/Cliente/index.jsp</file>
@@ -60,5 +61,8 @@
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/web/Views/Usuario/create.jsp</file>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/web/Views/Equipo/details.jsp</file>
         </group>
+=======
+        <group name="ControlAlquilerJAVA"/>
+>>>>>>> 023f5980ae8d082080e04a2f1157cd8a907e56f1
     </open-files>
 </project-private>
