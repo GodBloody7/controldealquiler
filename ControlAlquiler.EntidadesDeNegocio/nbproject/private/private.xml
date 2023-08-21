@@ -2,15 +2,25 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group name="ControlAlquilerJAVA">
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Alquiler.java</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Cliente.java</file>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Usuario.java</file>
-        </group>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Equipo.java</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Categoria.java</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/DetalleAlquiler.java</file>
+=======
         <group name="ControlAlquiler">
             <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquiler/controldealquiler/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/DetalleAlquiler.java</file>
+>>>>>>> 023f5980ae8d082080e04a2f1157cd8a907e56f1
         </group>
+<<<<<<< HEAD
         <group name="ColtrolAlquilerJAVA">
             <file>file:/C:/Users/Fernando%20Hernández/Desktop/ColtrolAlquilerJAVA/controldealquiler/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Cliente.java</file>
         </group>
+=======
+        <group name="ControlAlquilerJAVA"/>
+>>>>>>> baca2ac6ba25efde9a2e5b2de24f2523c0041aff
     </open-files>
 </project-private>
