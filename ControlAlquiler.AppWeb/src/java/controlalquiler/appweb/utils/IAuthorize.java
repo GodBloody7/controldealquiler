@@ -4,10 +4,10 @@
  */
 package controlalquiler.appweb.utils;
 
-/**
- *
- * @author Henry
- */
+import jakarta.servlet.ServletException;
+import java.io.IOException;
+
+
 public interface IAuthorize {
-    
+    void authorize() throws ServletException, IOException;
 }
