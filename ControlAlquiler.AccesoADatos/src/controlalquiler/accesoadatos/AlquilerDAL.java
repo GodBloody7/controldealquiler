@@ -10,7 +10,7 @@ public class AlquilerDAL {
    
     
     static String obtenerCampos(){
-        return "a.Id, a.IdCliente, a.IdUsuario, a.FechaEntrega, a.FechaDevolucion, a.FechaRegistrado, a.FechaCerrado, a.Estatus";
+        return "a.Id, a.IdCliente, a.IdUsuario, a.FechaEntrega, a.FechaDevolucion, a.FechaRegistrado";
     }
     
     private static String obtenerSelect(Alquiler pAlquiler){
@@ -35,15 +35,13 @@ public class AlquilerDAL {
         int result;
         String sql;
        try(Connection conn = ComunDB.obtenerConexion();){
-           sql = " INSERT INTO Alquiler(IdCliente, IdUsuario, FechaEntrega, FechaDevolucion, FechaRegistrado, FechaCerrado,Estatus) VALUES(?,?,?,?,?,?,?)";
+           sql = " INSERT INTO Alquiler(IdCliente, IdUsuario, FechaEntrega, FechaDevolucion, FechaRegistrado) VALUES(?,?,?,?,?,?,?)";
            try(PreparedStatement ps = ComunDB.createPreparedStatement(conn, sql);){
                ps.setInt(1, pAlquiler.getIdCliente());
                ps.setInt(2, pAlquiler.getIdUsuario());
                ps.setDate(3, java.sql.Date.valueOf(LocalDate.now()));
                ps.setDate(4, java.sql.Date.valueOf(LocalDate.now()));
                ps.setDate(5, java.sql.Date.valueOf(LocalDate.now()));
-               ps.setDate(6, java.sql.Date.valueOf(LocalDate.now()));
-               ps.setByte(7, pAlquiler.getEstatus());
                result = ps.executeUpdate();
                ps.close();
            }catch(SQLException ex){
@@ -64,7 +62,6 @@ public class AlquilerDAL {
       try(PreparedStatement ps = ComunDB.createPreparedStatement(conn, sql);){
           ps.setInt(1, pAlquiler.getIdCliente());
           ps.setInt(2, pAlquiler.getIdUsuario());
-          ps.setByte(3, pAlquiler.getEstatus());
           ps.setInt(4, pAlquiler.getId());
           result = ps.executeUpdate();
           ps.close();
@@ -113,9 +110,6 @@ public class AlquilerDAL {
       pIndex++;
       pAlquiler.setFechaRegistrado(pResultSet.getDate(pIndex).toLocalDate());
       pIndex++;
-      pAlquiler.setFechaCerrado(pResultSet.getDate(pIndex).toLocalDate());
-      pIndex++;
-      pAlquiler.setEstatus(pResultSet.getByte(pIndex));
       return pIndex;
   }
   
@@ -217,12 +211,6 @@ public class AlquilerDAL {
               statement.setInt(pUtilQuery.getNumWhere(), pAlquiler.getIdUsuario());
           }
       }
-      if(pAlquiler.getEstatus() > 0){
-          pUtilQuery.AgregarNumWhere(" a.IdEstatus=? ");
-          if(statement != null){
-              statement.setByte(pUtilQuery.getNumWhere(), pAlquiler.getEstatus());
-          }
-      }
   }
   
   public static ArrayList<Alquiler>buscar(Alquiler pAlquiler) throws Exception{
@@ -253,7 +241,7 @@ public class AlquilerDAL {
       return alquileres;
   }
   
-  public static ArrayList<Alquiler> buscarIncluirUsuario(Alquiler pAlquiler) throws Exception{
+  public static ArrayList<Alquiler> buscarIncluirAlquiler(Alquiler pAlquiler) throws Exception{
       ArrayList<Alquiler> alquileres = new ArrayList();
       try(Connection conn = ComunDB.obtenerConexion();){
           String sql = " SELECT ";
