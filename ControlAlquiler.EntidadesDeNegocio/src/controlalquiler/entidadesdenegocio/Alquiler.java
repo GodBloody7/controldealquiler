@@ -10,26 +10,23 @@ public class Alquiler {
     private LocalDate fechaEntrega;
     private LocalDate fechaDevolucion;
     private LocalDate fechaRegistrado;
-    private LocalDate fechaCerrado;
-    private byte estatus;
     private int top_aux;
     private Usuario usuario;
-
+    private Cliente cliente;
     
     public Alquiler() {
     }
 
-    public Alquiler(int id, int idCliente, int idUsuario, LocalDate fechaEntrega, LocalDate fechaDevolucion, LocalDate fechaRegistrado, LocalDate fechaCerrado, byte estatus, int top_aux, Usuario usuario) {
+    public Alquiler(int id, int idCliente, int idUsuario, LocalDate fechaEntrega, LocalDate fechaDevolucion, LocalDate fechaRegistrado, int top_aux, Usuario usuario, Cliente cliente) {
         this.id = id;
         this.idCliente = idCliente;
         this.idUsuario = idUsuario;
         this.fechaEntrega = fechaEntrega;
         this.fechaDevolucion = fechaDevolucion;
         this.fechaRegistrado = fechaRegistrado;
-        this.fechaCerrado = fechaCerrado;
-        this.estatus = estatus;
         this.top_aux = top_aux;
         this.usuario = usuario;
+        this.cliente = cliente;
     }
 
     public int getId() {
@@ -79,24 +76,8 @@ public class Alquiler {
     public void setFechaRegistrado(LocalDate fechaRegistrado) {
         this.fechaRegistrado = fechaRegistrado;
     }
-
-    public LocalDate getFechaCerrado() {
-        return fechaCerrado;
-    }
-
-    public void setFechaCerrado(LocalDate fechaCerrado) {
-        this.fechaCerrado = fechaCerrado;
-    }
-
-    public byte getEstatus() {
-        return estatus;
-    }
-
-    public void setEstatus(byte status) {
-        this.estatus = estatus;
-    }
     
-        public int getTop_aux() {
+    public int getTop_aux() {
         return top_aux;
     }
 
@@ -108,5 +89,12 @@ public class Alquiler {
     }
     public void setUsuario(Usuario usuario){
         this.usuario = usuario;
+    }
+    
+    public Cliente getCliente(){
+        return cliente;
+    }
+    public void setCliente(Cliente cliente){
+        this.cliente = cliente;
     }
 }
