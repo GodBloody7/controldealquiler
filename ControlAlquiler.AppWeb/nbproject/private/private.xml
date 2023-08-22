@@ -60,5 +60,8 @@
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/web/Views/Usuario/create.jsp</file>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/web/Views/Equipo/details.jsp</file>
         </group>
+        <group name="ColtrolAlquilerJAVA">
+            <file>file:/C:/Users/Fernando%20Hernández/Desktop/ColtrolAlquilerJAVA/controldealquiler/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/ClienteServlet.java</file>
+        </group>
     </open-files>
 </project-private>
