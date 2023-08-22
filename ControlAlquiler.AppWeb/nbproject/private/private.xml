@@ -60,5 +60,10 @@
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/web/Views/Usuario/create.jsp</file>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/web/Views/Equipo/details.jsp</file>
         </group>
+        <group name="ControlAlquiler">
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquiler/controldealquiler/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/ClienteServlet.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquiler/controldealquiler/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/AlquilerServlet.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquiler/controldealquiler/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/DetalleAlquilerServlet.java</file>
+        </group>
     </open-files>
 </project-private>

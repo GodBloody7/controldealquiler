@@ -49,10 +49,5 @@ public class Categoria {
 
     public void setEquipos(ArrayList<Equipo> equipos) {
         this.equipos = equipos;
-    }
-    
-    
-    
-    
-    
+    } 
 }

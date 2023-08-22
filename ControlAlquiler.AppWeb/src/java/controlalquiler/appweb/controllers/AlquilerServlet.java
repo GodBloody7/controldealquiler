@@ -27,7 +27,6 @@ public class AlquilerServlet extends HttpServlet {
         Alquiler alquiler = new Alquiler();
         alquiler.setIdCliente(Integer.parseInt(Utilidad.getParameter(request, "idCliente", "0")));
         alquiler.setIdUsuario(Integer.parseInt(Utilidad.getParameter(request, "idUsuario", "0")));
-        alquiler.setEstatus(Byte.parseByte(Utilidad.getParameter(request, "estatus", "0")));
         
         if (accion.equals("index")) {
             alquiler.setTop_aux(Integer.parseInt(Utilidad.getParameter(request, "top_aux", "10")));

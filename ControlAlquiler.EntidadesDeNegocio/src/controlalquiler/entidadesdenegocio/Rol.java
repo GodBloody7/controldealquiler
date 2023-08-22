@@ -50,8 +50,4 @@ public class Rol {
     public void setUsuarios(ArrayList<Usuario> usuarios) {
         this.usuarios = usuarios;
     }
-
-    
-    
-    
 }
