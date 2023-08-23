@@ -2,8 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group name="ControlAlquilerJAVACopia8">
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/copias%20ControlAlquilerJAVA/ControlAlquilerJAVACopia8/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/AlquilerServlet.java</file>
+=======
+        <group name="ControlAlquiler">
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquiler/controldealquiler/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/ClienteServlet.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquiler/controldealquiler/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/AlquilerServlet.java</file>
+            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquiler/controldealquiler/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/DetalleAlquilerServlet.java</file>
+>>>>>>> 5c569c5ad56bf52845a1ccc3aad0410094070907
         </group>
     </open-files>
 </project-private>

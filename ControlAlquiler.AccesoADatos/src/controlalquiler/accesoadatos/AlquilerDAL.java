@@ -1,4 +1,3 @@
-
 package controlalquiler.accesoadatos;
 
 import java.util.*;
@@ -126,6 +125,7 @@ public class AlquilerDAL {
       }
   }
   
+<<<<<<< HEAD
   private static void obtenerDatosIncluirRelaciones(PreparedStatement pPS, ArrayList<Alquiler>pAlquileres) throws Exception{
       try(ResultSet resultSet= ComunDB.obtenerResultSet(pPS);){
           HashMap<Integer, Usuario>  usuarioMap = new HashMap(); 
@@ -157,6 +157,41 @@ public class AlquilerDAL {
                    throw ex;
                }
   }
+=======
+    private static void obtenerDatosIncluirRelaciones(PreparedStatement pPS, ArrayList<Alquiler> pAlquiler) throws Exception {
+        try (ResultSet resultSet = ComunDB.obtenerResultSet(pPS);) {
+            HashMap<Integer, Cliente> clienteMap = new HashMap(); 
+            HashMap<Integer, Usuario> usuarioMap = new HashMap();
+            while (resultSet.next()) {
+                Alquiler alquiler = new Alquiler();
+                int index = asignarDatosResultSet(alquiler, resultSet, 0);
+                if (clienteMap.containsKey(alquiler.getIdCliente()) == false) {
+                    Cliente cliente = new Cliente();
+                    ClienteDAL.asignarDatosResultSet(cliente, resultSet, index);
+                    clienteMap.put(cliente.getId(), cliente); 
+                    alquiler.setCliente(cliente); 
+                } else {
+                    alquiler.setCliente(clienteMap.get(alquiler.getIdCliente())); 
+                }
+                
+                if (usuarioMap.containsKey(alquiler.getIdUsuario()) == false) {
+                    Usuario usuario = new Usuario();
+                    UsuarioDAL.asignarDatosResultSet(usuario, resultSet, index+3);
+                    usuarioMap.put(usuario.getId(), usuario); 
+                    alquiler.setUsuario(usuario); 
+                } else {
+                    alquiler.setUsuario(usuarioMap.get(alquiler.getIdUsuario())); 
+                }
+
+                pAlquiler.add(alquiler); 
+            }
+            resultSet.close();
+        } catch (SQLException ex) {
+            throw ex; 
+        }
+    }
+    
+>>>>>>> 5c569c5ad56bf52845a1ccc3aad0410094070907
   public static Alquiler obtenerPorId(Alquiler pAlquiler)throws Exception{
       Alquiler alquiler = new Alquiler();
       ArrayList<Alquiler>alquileres = new   ArrayList();
@@ -251,6 +286,7 @@ public class AlquilerDAL {
       return alquileres;
   }
   
+<<<<<<< HEAD
   public static ArrayList<Alquiler> buscarIncluirRelaciones(Alquiler pAlquiler) throws Exception{
       ArrayList<Alquiler> alquileres = new ArrayList();
       try(Connection conn = ComunDB.obtenerConexion();){
@@ -289,4 +325,43 @@ public class AlquilerDAL {
       return alquileres;
 
   }
+=======
+  public static ArrayList<Alquiler> buscarIncluirRelaciones(Alquiler pAlquiler) throws Exception {
+        ArrayList<Alquiler> alquileres = new ArrayList();
+        try (Connection conn = ComunDB.obtenerConexion();) {
+            String sql = "SELECT ";
+            if (pAlquiler.getTop_aux() > 0 && ComunDB.TIPODB == ComunDB.TipoDB.SQLSERVER) {
+                sql += "TOP " + pAlquiler.getTop_aux() + " "; 
+            }
+            sql += obtenerCampos();
+            sql += ", ";
+            sql += ClienteDAL.obtenerCampos();
+            sql += ", ";
+            sql += UsuarioDAL.obtenerCampos();
+            sql += ", ";
+            sql += " FROM Alquileres x";
+            sql += " INNER JOIN Clientes m on (x.IdCliente = m.Id)";
+            sql += " INNER JOIN Usuarios p on (x.IdUsuario = p.Id)";
+            ComunDB comundb = new ComunDB();
+            ComunDB.utilQuery utilQuery = comundb.new utilQuery(sql, null, 0);
+            querySelect(pAlquiler, utilQuery);
+            sql = utilQuery.getSQL();
+            sql += agregarOrderBy(pAlquiler);
+            try (PreparedStatement ps = ComunDB.createPreparedStatement(conn, sql);) {
+                utilQuery.setStatement(ps);
+                utilQuery.setSQL(null);
+                utilQuery.setNumWhere(0);
+                querySelect(pAlquiler, utilQuery);
+                obtenerDatosIncluirRelaciones(ps, alquileres);
+                ps.close();
+            } catch (SQLException ex) {
+                throw ex;
+            }
+            conn.close();
+        } catch (SQLException ex) {
+            throw ex;
+        }
+        return alquileres;
+    }
+>>>>>>> 5c569c5ad56bf52845a1ccc3aad0410094070907
 }
