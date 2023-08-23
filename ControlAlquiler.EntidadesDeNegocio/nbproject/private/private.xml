@@ -2,11 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group name="ControlAlquilerJAVA">
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Usuario.java</file>
         </group>
         <group>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Usuario.java</file>
         </group>
+=======
+        <group name="ControlAlquilerJAVACopia8">
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/copias%20ControlAlquilerJAVA/ControlAlquilerJAVACopia8/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Usuario.java</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/copias%20ControlAlquilerJAVA/ControlAlquilerJAVACopia8/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Alquiler.java</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/copias%20ControlAlquilerJAVA/ControlAlquilerJAVACopia8/ControlAlquilerJAVA/ControlAlquiler.EntidadesDeNegocio/src/controlalquiler/entidadesdenegocio/Cliente.java</file>
+        </group>
+>>>>>>> dab6a067700de6b1cbd33aa5a390a25a679e5ecc
     </open-files>
 </project-private>

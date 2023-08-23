@@ -1,7 +1,6 @@
 package controlalquiler.appweb.controllers;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -90,6 +89,10 @@ public class AlquilerServlet extends HttpServlet {
                 Cliente cliente = new Cliente();
                 cliente.setId(alquiler_result.getIdCliente());
                 alquiler_result.setCliente(ClienteDAL.obtenerPorId(cliente));
+                Usuario usuario = new Usuario();
+                usuario.setId(alquiler_result.getIdUsuario());
+                alquiler_result.setUsuario(UsuarioDAL.obtenerPorId(usuario));
+
                 request.setAttribute("alquiler", alquiler_result);
             } else {
                 Utilidad.enviarError("El Id:" + alquiler_result.getId() + " no existe en la tabla de Alquiler", request, response);

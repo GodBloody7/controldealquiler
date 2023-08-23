@@ -44,10 +44,8 @@ public class DetalleAlquilerServlet extends HttpServlet {
         try {
             DetalleAlquiler detalle = new DetalleAlquiler();
             detalle.setTop_aux(10);
-            ArrayList<DetalleAlquiler> detalles = DetalleAlquilerDAL.buscarIncluirAlquiler(detalle);
-            ArrayList<DetalleAlquiler> detallesAl = DetalleAlquilerDAL.buscarIncluirEquipo(detalle);
+            ArrayList<DetalleAlquiler> detalles = DetalleAlquilerDAL.buscarIncluirRelaciones(detalle);
             request.setAttribute("detalles", detalles);
-            request.setAttribute("detalles", detallesAl);
             request.setAttribute("top_aux", detalle.getTop_aux());
             request.getRequestDispatcher("Views/DetalleAlquiler/index.jsp").forward(request, response);
         } catch (Exception ex) {
@@ -58,10 +56,8 @@ public class DetalleAlquilerServlet extends HttpServlet {
     private void doPostRequestIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             DetalleAlquiler detalle = obtenerDetalleAlquiler(request);
-            ArrayList<DetalleAlquiler> detalles = DetalleAlquilerDAL.buscarIncluirAlquiler(detalle);
-            ArrayList<DetalleAlquiler> detallesAl = DetalleAlquilerDAL.buscarIncluirEquipo(detalle);
+            ArrayList<DetalleAlquiler> detalles = DetalleAlquilerDAL.buscarIncluirRelaciones(detalle);
             request.setAttribute("detalles", detalles);
-            request.setAttribute("detalles", detallesAl);
             request.setAttribute("top_aux", detalle.getTop_aux());
             request.getRequestDispatcher("Views/Empresa/index.jsp").forward(request, response);
         } catch (Exception ex) {
@@ -95,11 +91,12 @@ public class DetalleAlquilerServlet extends HttpServlet {
             DetalleAlquiler detalle_result = DetalleAlquilerDAL.obtenerPorId(detalle);
             if (detalle_result.getId() > 0) {
                 Alquiler alquiler = new Alquiler();
-                Equipo equipo = new Equipo();
                 alquiler.setId(detalle_result.getIdAquiler());
+                detalle_result.setAlquiler(AlquilerDAL.obtenerPorId(alquiler));              
+                Equipo equipo = new Equipo();
                 equipo.setId(detalle_result.getIdEquipo());
-                detalle_result.setAlquiler(AlquilerDAL.obtenerPorId(alquiler));
                 detalle_result.setEquipo(EquipoDAL.obtenerPorId(equipo));
+                
                 request.setAttribute("detalle", detalle_result);
             } else {
                 Utilidad.enviarError("El Id:" + detalle_result.getId() + " no existe en la tabla de Detalles Alquiler", request, response);
