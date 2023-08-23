@@ -1,6 +1,8 @@
 
 package controlalquiler.entidadesdenegocio;
 
+import java.util.ArrayList;
+
 public class Cliente {
     private int id;
     private String nombre;
@@ -9,11 +11,12 @@ public class Cliente {
     private String telefono;
     private String direccion;
     private int top_aux;
+    private ArrayList<Alquiler>alquileres;
 
     public Cliente() {
     }
 
-    public Cliente(int id, String nombre, String apellido, String razonsocial, String telefono, String direccion, int top_aux) {
+    public Cliente(int id, String nombre, String apellido, String razonsocial, String telefono, String direccion, int top_aux, ArrayList<Alquiler>alquileres) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -21,6 +24,7 @@ public class Cliente {
         this.telefono = telefono;
         this.direccion = direccion;
         this.top_aux = top_aux;
+        this.alquileres = alquileres;
     }
 
     public int getId() {
@@ -79,8 +83,12 @@ public class Cliente {
         this.top_aux = top_aux;
     }
    
+    public ArrayList<Alquiler>getAlquileres(){
+        return alquileres;
+    }
 
-
+    public void setAlquileres(ArrayList<Alquiler> alquileres){
+        this.alquileres = alquileres;
+    }
 
 }
-

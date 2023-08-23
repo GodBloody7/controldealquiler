@@ -126,9 +126,10 @@ public class AlquilerDAL {
       }
   }
   
-  private static void obtenerDatosIncluirUsuario(PreparedStatement pPS, ArrayList<Alquiler>pAlquileres) throws Exception{
+  private static void obtenerDatosIncluirRelaciones(PreparedStatement pPS, ArrayList<Alquiler>pAlquileres) throws Exception{
       try(ResultSet resultSet= ComunDB.obtenerResultSet(pPS);){
           HashMap<Integer, Usuario>  usuarioMap = new HashMap(); 
+          HashMap<Integer, Cliente> clienteMap = new HashMap();
           while(resultSet.next()){
               Alquiler alquiler = new Alquiler();
               int index = asignarDatosResultSet(alquiler, resultSet, 0);
@@ -139,6 +140,15 @@ public class AlquilerDAL {
                   alquiler.setUsuario(usuario);
               }else {
                   alquiler.setUsuario(usuarioMap.get(alquiler.getIdUsuario()));
+              }
+              if (clienteMap.containsKey(alquiler.getIdCliente()) == false){
+                  Cliente cliente = new Cliente();
+                  ClienteDAL.asignarDatosResultSet(cliente, resultSet, index);
+                  clienteMap.put(cliente.getId(), cliente);
+                 alquiler.setCliente(cliente);
+              }
+              else{
+                  alquiler.setCliente(clienteMap.get(alquiler.getIdCliente()));
               }
               pAlquileres.add(alquiler);
           }
@@ -241,7 +251,7 @@ public class AlquilerDAL {
       return alquileres;
   }
   
-  public static ArrayList<Alquiler> buscarIncluirAlquiler(Alquiler pAlquiler) throws Exception{
+  public static ArrayList<Alquiler> buscarIncluirRelaciones(Alquiler pAlquiler) throws Exception{
       ArrayList<Alquiler> alquileres = new ArrayList();
       try(Connection conn = ComunDB.obtenerConexion();){
           String sql = " SELECT ";
@@ -251,8 +261,12 @@ public class AlquilerDAL {
           sql += obtenerCampos();
           sql += ",";
           sql += UsuarioDAL.obtenerCampos();
+          sql += ",";
+           sql += ClienteDAL.obtenerCampos();
+          sql += ",";
           sql += " FROM Alquiler a";
-          sql += "JOIN Usuario u on (u.IdUsuario=u.Id)";
+          sql += " INNER JOIN Usuarios U on (a.IdUsuario = p.Id)";
+          sql += " INNER JOIN Cliente c on (a.IdCliente = c.Id)";
           ComunDB comundb = new ComunDB();
           ComunDB.utilQuery utilQuery = comundb.new utilQuery(sql, null, 0);
           querySelect(pAlquiler, utilQuery);
@@ -263,7 +277,7 @@ public class AlquilerDAL {
               utilQuery.setSQL(null);
               utilQuery.setNumWhere(0);
               querySelect(pAlquiler, utilQuery);
-              obtenerDatosIncluirUsuario(ps, alquileres);
+              obtenerDatosIncluirRelaciones(ps, alquileres);
               ps.close();
           }catch (SQLException ex){
               throw ex;

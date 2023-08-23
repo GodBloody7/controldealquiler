@@ -41,7 +41,7 @@ public class AlquilerServlet extends HttpServlet {
         try {
             Alquiler alquiler = new Alquiler();
             alquiler.setTop_aux(10);
-            ArrayList<Alquiler> alquileres = AlquilerDAL.buscarIncluirAlquiler(alquiler);
+            ArrayList<Alquiler> alquileres = AlquilerDAL.buscarIncluirRelaciones(alquiler);
             request.setAttribute("alquileres", alquileres);
             request.setAttribute("top_aux", alquiler.getTop_aux());
             request.getRequestDispatcher("Views/Alquiler/index.jsp").forward(request, response);
@@ -53,7 +53,7 @@ public class AlquilerServlet extends HttpServlet {
     private void doPostRequestIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             Alquiler alquiler = obtenerAlquiler(request);
-            ArrayList<Alquiler> alquileres = AlquilerDAL.buscarIncluirAlquiler(alquiler);
+            ArrayList<Alquiler> alquileres = AlquilerDAL.buscarIncluirRelaciones(alquiler);
             request.setAttribute("alquileres", alquileres);
             request.setAttribute("top_aux", alquiler.getTop_aux());
             request.getRequestDispatcher("Views/Alquiler/index.jsp").forward(request, response);
