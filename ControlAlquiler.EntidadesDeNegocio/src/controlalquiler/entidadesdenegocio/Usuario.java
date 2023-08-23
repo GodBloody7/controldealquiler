@@ -1,6 +1,7 @@
 package controlalquiler.entidadesdenegocio;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Usuario {
     private int id;
@@ -14,11 +15,12 @@ public class Usuario {
     private int top_aux;
     private String confirmPassword_aux;
     private Rol rol;
+    private ArrayList<Alquiler> alquileres;
 
     public Usuario() {
     }
 
-    public Usuario(int id, int idRol, String nombre, String apellido, String login, String password, byte estatus, LocalDate fechaRegistro, int top_aux, String confirmPassword_aux, Rol rol) {
+    public Usuario(int id, int idRol, String nombre, String apellido, String login, String password, byte estatus, LocalDate fechaRegistro, int top_aux, String confirmPassword_aux, Rol rol, ArrayList<Alquiler> alquileres) {
         this.id = id;
         this.idRol = idRol;
         this.nombre = nombre;
@@ -30,6 +32,7 @@ public class Usuario {
         this.top_aux = top_aux;
         this.confirmPassword_aux = confirmPassword_aux;
         this.rol = rol;
+        this.alquileres = alquileres;
     }
 
     public int getId() {
@@ -119,6 +122,17 @@ public class Usuario {
     public void setRol(Rol rol) {
         this.rol = rol;
     }
+    
+    public ArrayList<Alquiler> alquilere(){
+        return alquileres;
+    }
+    
+    public void setAlquileres (ArrayList<Alquiler> alquileres){
+        this.alquileres = alquileres;
+    }
+        
+    
+    
     
     public class EstatusUsuario{
         public static final byte  ACTIVO = 1;
