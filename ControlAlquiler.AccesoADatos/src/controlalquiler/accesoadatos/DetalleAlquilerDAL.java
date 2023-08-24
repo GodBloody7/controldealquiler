@@ -32,7 +32,7 @@ public class DetalleAlquilerDAL {
         int result;
         String sql;
         try(Connection conn = ComunDB.obtenerConexion();){
-            sql = "INSERT INTO DetalleAlquiler(IdAlquiler, IdEquipo, Cantidad, Precio, SubTotal) VALUES(?,?,?,?,?,?)";
+            sql = "INSERT INTO DetalleAlquiler(IdAlquiler, IdEquipo, Cantidad, Precio, SubTotal) VALUES(?,?,?,?,?)";
             try(PreparedStatement ps = ComunDB.createPreparedStatement(conn, sql);){
                 ps.setInt(1, pDetalle.getIdAquiler());
                 ps.setInt(2, pDetalle.getIdEquipo());

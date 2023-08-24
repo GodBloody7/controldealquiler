@@ -34,7 +34,7 @@ public class AlquilerDAL {
         int result;
         String sql;
        try(Connection conn = ComunDB.obtenerConexion();){
-           sql = " INSERT INTO Alquiler(IdCliente, IdUsuario, FechaEntrega, FechaDevolucion, FechaRegistrado) VALUES(?,?,?,?,?,?,?)";
+           sql = " INSERT INTO Alquiler(IdCliente, IdUsuario, FechaEntrega, FechaDevolucion, FechaRegistrado) VALUES(?,?,?,?,?)";
            try(PreparedStatement ps = ComunDB.createPreparedStatement(conn, sql);){
                ps.setInt(1, pAlquiler.getIdCliente());
                ps.setInt(2, pAlquiler.getIdUsuario());
