@@ -1,17 +1,15 @@
-<%-- 
-    Document   : select
-    Created on : 18 ago 2023, 19:05:23
-    Author     : Henry
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<%@page import="controlalquiler.entidadesdenegocio.Usuario"%>
+<%@page import="controlalquiler.accesoadatos.UsuarioDAL"%>
+<%@page import="java.util.ArrayList"%>
+
+<% ArrayList<Uusario> usuarios = UsuarioDAL.obtenerTodos();
+    int id = Integer.parseInt(request.getParameter("id"));
+%>
+<select id="slUsuario" name="idUsuario">
+    <option <%=(id == 0) ? "selected" : ""%>  value="0">SELECCIONAR</option>
+    <% for (Usuario usuario : usuarios) {%>
+        <option <%=(id == usuario.getId()) ? "selected" : "" %>  value="<%=usuario.getId()%>"><%= usuario.getNombre()%></option>
+    <%}%>
+</select>
+<label for="idUsuario">Usuario</label>

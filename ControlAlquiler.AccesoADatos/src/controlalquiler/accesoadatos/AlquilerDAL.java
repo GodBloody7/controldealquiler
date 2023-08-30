@@ -9,14 +9,16 @@ public class AlquilerDAL {
    
     
     static String obtenerCampos(){
-        return "a.Id, a.IdCliente, a.IdUsuario, a.FechaEntrega, a.FechaDevolucion, a.FechaRegistrado";
+        return "a.Id, a.IdCliente, a.IdUsuario, a.FechaEntrega, a.FechaDevolucion, a.FechaRegistro";
     }
     
-    private static String obtenerSelect(Alquiler pAlquiler){
+   
+    
+    private static String obtenerSelect(Alquiler pAlquiler) {
         String sql;
         sql = "SELECT ";
-        if(pAlquiler.getTop_aux() > 0 && ComunDB.TIPODB == ComunDB.TipoDB.SQLSERVER){
-            sql += "TOP " + pAlquiler.getTop_aux() + " ";
+        if (pAlquiler.getTop_aux() > 0 && ComunDB.TIPODB == ComunDB.TipoDB.SQLSERVER) {
+             sql += "TOP " + pAlquiler.getTop_aux() + " ";
         }
         sql += (obtenerCampos() + " FROM Alquiler a");
         return sql;
@@ -34,7 +36,7 @@ public class AlquilerDAL {
         int result;
         String sql;
        try(Connection conn = ComunDB.obtenerConexion();){
-           sql = " INSERT INTO Alquiler(IdCliente, IdUsuario, FechaEntrega, FechaDevolucion, FechaRegistrado) VALUES(?,?,?,?,?,?,?)";
+           sql = " INSERT INTO Alquiler(IdCliente, IdUsuario, FechaEntrega, FechaDevolucion, FechaRegistrado) VALUES(?,?,?,?,?)";
            try(PreparedStatement ps = ComunDB.createPreparedStatement(conn, sql);){
                ps.setInt(1, pAlquiler.getIdCliente());
                ps.setInt(2, pAlquiler.getIdUsuario());
@@ -57,7 +59,7 @@ public class AlquilerDAL {
       int result;
       String sql;
       try(Connection conn = ComunDB.obtenerConexion();){
-          sql = "UPDATE Alquiler SET IdCliente=?, IdUsuario=?, Estatus=? WHERE Id=? ";
+          sql = "UPDATE Alquiler SET IdCliente=?, IdUsuario=? WHERE Id=? ";
       try(PreparedStatement ps = ComunDB.createPreparedStatement(conn, sql);){
           ps.setInt(1, pAlquiler.getIdCliente());
           ps.setInt(2, pAlquiler.getIdUsuario());
@@ -127,19 +129,11 @@ public class AlquilerDAL {
   
   private static void obtenerDatosIncluirRelaciones(PreparedStatement pPS, ArrayList<Alquiler>pAlquileres) throws Exception{
       try(ResultSet resultSet= ComunDB.obtenerResultSet(pPS);){
-          HashMap<Integer, Usuario>  usuarioMap = new HashMap(); 
           HashMap<Integer, Cliente> clienteMap = new HashMap();
+           HashMap<Integer, Usuario>  usuarioMap = new HashMap(); 
           while(resultSet.next()){
               Alquiler alquiler = new Alquiler();
               int index = asignarDatosResultSet(alquiler, resultSet, 0);
-              if(usuarioMap.containsKey(alquiler.getIdUsuario()) == false){
-                  Usuario usuario = new Usuario();
-                  UsuarioDAL.asignarDatosResultSet(usuario, resultSet, index);
-                  usuarioMap.put(usuario.getId(), usuario);
-                  alquiler.setUsuario(usuario);
-              }else {
-                  alquiler.setUsuario(usuarioMap.get(alquiler.getIdUsuario()));
-              }
               if (clienteMap.containsKey(alquiler.getIdCliente()) == false){
                   Cliente cliente = new Cliente();
                   ClienteDAL.asignarDatosResultSet(cliente, resultSet, index);
@@ -148,6 +142,14 @@ public class AlquilerDAL {
               }
               else{
                   alquiler.setCliente(clienteMap.get(alquiler.getIdCliente()));
+              }
+              if(usuarioMap.containsKey(alquiler.getIdUsuario()) == false){
+                  Usuario usuario = new Usuario();
+                  UsuarioDAL.asignarDatosResultSet(usuario, resultSet, index);
+                  usuarioMap.put(usuario.getId(), usuario);
+                  alquiler.setUsuario(usuario);
+              }else {
+                  alquiler.setUsuario(usuarioMap.get(alquiler.getIdUsuario()));
               }
               pAlquileres.add(alquiler);
           }
@@ -180,8 +182,7 @@ public class AlquilerDAL {
       return alquiler;
   }
   public static ArrayList<Alquiler>obtenerTodos() throws Exception{
-      ArrayList<Alquiler> alquileres;
-      alquileres = new ArrayList<>();
+      ArrayList<Alquiler> alquileres = new ArrayList<>();
       try(Connection conn = ComunDB.obtenerConexion();){
           String sql = obtenerSelect(new Alquiler());
           sql += agregarOrderBy(new Alquiler());
@@ -255,17 +256,16 @@ public class AlquilerDAL {
       try(Connection conn = ComunDB.obtenerConexion();){
           String sql = " SELECT ";
           if(pAlquiler.getTop_aux() > 0 && ComunDB.TIPODB == ComunDB.TipoDB.SQLSERVER){
-              sql += " TOP " + pAlquiler.getTop_aux() + " ";
+              sql += " TOP " + pAlquiler.getTop_aux() + "  ";
           }
           sql += obtenerCampos();
-          sql += ",";
-          sql += UsuarioDAL.obtenerCampos();
-          sql += ",";
-           sql += ClienteDAL.obtenerCampos();
-          sql += ",";
+          sql += ", ";
+          sql += ClienteDAL.obtenerCampos();
+          sql += ", ";
+           sql += UsuarioDAL.obtenerCampos();
           sql += " FROM Alquiler a";
-          sql += " INNER JOIN Usuarios U on (a.IdUsuario = p.Id)";
-          sql += " INNER JOIN Cliente c on (a.IdCliente = c.Id)";
+          sql += " JOIN Cliente c on (a.IdCliente = c.Id)";
+          sql += " JOIN Usuario u on (a.IdUsuario = u.Id)";
           ComunDB comundb = new ComunDB();
           ComunDB.utilQuery utilQuery = comundb.new utilQuery(sql, null, 0);
           querySelect(pAlquiler, utilQuery);

@@ -2,17 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group name="ControlAlquilerJAVA">
-            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/RolServlet.java</file>
-            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/UsuarioServlet.java</file>
-            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/AlquilerServlet.java</file>
-            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/ClienteServlet.java</file>
-            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/EquipoServlet.java</file>
-            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/HomeServlet.java</file>
-            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/CategoriaServlet.java</file>
-            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/DetalleAlquilerServlet.java</file>
-        </group>
         <group>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/DetalleAlquilerServlet.java</file>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/HomeServlet.java</file>
@@ -22,10 +11,31 @@
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/EquipoServlet.java</file>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/RolServlet.java</file>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/CategoriaServlet.java</file>
-=======
-        <group name="ControlAlquilerJAVACopia8">
-            <file>file:/C:/Users/Henry/OneDrive/Escritorio/copias%20ControlAlquilerJAVA/ControlAlquilerJAVACopia8/ControlAlquilerJAVA/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/AlquilerServlet.java</file>
->>>>>>> dab6a067700de6b1cbd33aa5a390a25a679e5ecc
+        </group>
+        <group name="ControlAlquilerJAVA">
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Alquiler/details.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Shared/headerBody.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Rol/edit.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Usuario/delete.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Usuario/login.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/AlquilerServlet.java</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/UsuarioServlet.java</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/utils/Utilidad.java</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Usuario/cambiarPassword.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Shared/error.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Rol/select.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Alquiler/edit.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Usuario/select.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Categoria/select.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/utils/IAuthorize.java</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Alquiler/delete.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Usuario/edit.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Alquiler/index.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Shared/footerBody.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/controllers/HomeServlet.java</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Alquiler/create.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Usuario/create.jsp</file>
+            <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/utils/SessionUser.java</file>
         </group>
     </open-files>
 </project-private>

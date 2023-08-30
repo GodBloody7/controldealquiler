@@ -18,6 +18,10 @@
                     <file>${reference.ControlAlquiler_AccesoADatos.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
+                <library dirs="200">
+                    <file>${file.reference.mssql-jdbc-12.2.0.jre11__1_.jar-1}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
             </web-module-libraries>
             <web-module-additional-libraries/>
             <source-roots>

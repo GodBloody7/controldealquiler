@@ -19,11 +19,13 @@ import controlalquiler.entidadesdenegocio.Cliente;
 
 @WebServlet(name = "AlquilerServlet", urlPatterns = {"/Alquiler"})
 public class AlquilerServlet extends HttpServlet {
-    
-    
- private Alquiler obtenerAlquiler(HttpServletRequest request) {
+
+    private Alquiler obtenerAlquiler(HttpServletRequest request) {
         String accion = Utilidad.getParameter(request, "accion", "index");
         Alquiler alquiler = new Alquiler();
+        if (accion.equals("create") == false) {
+            alquiler.setId(Integer.parseInt(Utilidad.getParameter(request, "id", "0")));
+        }
         alquiler.setIdCliente(Integer.parseInt(Utilidad.getParameter(request, "idCliente", "0")));
         alquiler.setIdUsuario(Integer.parseInt(Utilidad.getParameter(request, "idUsuario", "0")));
         
@@ -32,10 +34,9 @@ public class AlquilerServlet extends HttpServlet {
             alquiler.setTop_aux(alquiler.getTop_aux() == 0 ? Integer.MAX_VALUE : alquiler.getTop_aux());
         }
         
-        
         return alquiler;
     }
-
+    
     private void doGetRequestIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             Alquiler alquiler = new Alquiler();
