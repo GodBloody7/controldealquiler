@@ -1,15 +1,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="controlalquiler.entidadesdenegocio.Usuario"%>
-<%@page import="controlalquiler.accesoadatos.UsuarioDAL"%>
+<%@page import="cfhn.controlalquiler.entidadesdenegocio.Categoria"%>
+<%@page import="cfhn.controlalquiler.accesoadatos.CategoriaDAL"%>
 <%@page import="java.util.ArrayList"%>
 
-<% ArrayList<Uusario> usuarios = UsuarioDAL.obtenerTodos();
+<% ArrayList<Categoria> categoria = CategoriaDAL.obtenerTodos();
     int id = Integer.parseInt(request.getParameter("id"));
 %>
-<select id="slUsuario" name="idUsuario">
+<select id="slCategoria" name="idCategoria">
     <option <%=(id == 0) ? "selected" : ""%>  value="0">SELECCIONAR</option>
-    <% for (Usuario usuario : usuarios) {%>
-        <option <%=(id == usuario.getId()) ? "selected" : "" %>  value="<%=usuario.getId()%>"><%= usuario.getNombre()%></option>
+    <% for (Categoria categoria : categorias) {%>
+    <option <%=(id == categoria.getId()) ? "selected" : ""%>  value="<%=categoria.getId()%>"><%= categoria.getNombre()%></option>
     <%}%>
 </select>
-<label for="idUsuario">Usuario</label>
+<label for="idCategoria">Categoria</label>
