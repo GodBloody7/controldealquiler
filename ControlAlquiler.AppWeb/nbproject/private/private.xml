@@ -37,12 +37,6 @@
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/web/Views/Usuario/create.jsp</file>
             <file>file:/C:/Users/Henry/OneDrive/Escritorio/ControlAlquilerJAVA%20origin/ControlAlquiler.AppWeb/src/java/controlalquiler/appweb/utils/SessionUser.java</file>
         </group>
-        <group name="ControlAlquiler">
-            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquiler/controldealquiler/ControlAlquiler.AppWeb/web/Views/DetalleAlquiler/edit.jsp</file>
-            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquiler/controldealquiler/ControlAlquiler.AppWeb/web/Views/DetalleAlquiler/index.jsp</file>
-            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquiler/controldealquiler/ControlAlquiler.AppWeb/web/Views/DetalleAlquiler/details.jsp</file>
-            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquiler/controldealquiler/ControlAlquiler.AppWeb/web/Views/DetalleAlquiler/create.jsp</file>
-            <file>file:/C:/Users/MINEDUCYT/Desktop/ControlAlquiler/controldealquiler/ControlAlquiler.AppWeb/web/Views/DetalleAlquiler/delete.jsp</file>
-        </group>
+        <group name="ControlAlquiler"/>
     </open-files>
 </project-private>
