@@ -165,7 +165,7 @@ public class EquipoDAL {
         ArrayList<Equipo> equipos = new ArrayList();
         try(Connection conn = ComunDB.obtenerConexion();){
             String sql = obtenerSelect(pEquipo);
-            sql += " WHERE e.id=?";
+            sql += " WHERE e.Id=?";
             try(PreparedStatement ps = ComunDB.createPreparedStatement(conn, sql);){
                 ps.setInt(1, pEquipo.getId());
                 obtenerDatos(ps, equipos);

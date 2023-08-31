@@ -102,7 +102,7 @@ public class EquipoServlet extends HttpServlet {
 
     private void doGetRequestEdit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         requestObtenerPorId(request, response);
-        request.getRequestDispatcher("Views/Empresa/edit.jsp").forward(request, response);
+        request.getRequestDispatcher("Views/Equipo/edit.jsp").forward(request, response);
     }
 
     private void doPostRequestEdit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
